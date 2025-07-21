@@ -23,12 +23,20 @@ The **Alert Rule Generator** automates the transformation of structured observab
 - Should operate as a **modular translation service** that ingests structured templates and outputs alerting configurations.
 - May be implemented as a CLI tool, UI plugin, or CI/CD-integrated component.
 - Must support **extensibility** to accommodate diverse enterprise alerting tools.
-- Should integrate with the **Business Observability Requirements Authoring System** as its source of input.
+- Should integrate with the **Business Observability Requirements** as its source of input.
 
-## Primary Ownership
+## Technical Specifications
+- **Step-Level Integration**: Serves as the bridge between declarative observability requirements defined at the Step level and executable alert logic.
+- **Platform Support**: Generates platform-specific outputs including Splunk SPL, Prometheus expressions, New Relic workflows, and other monitoring platforms.
+- **Signal Processing**: Handles business signals, process expectations, and performance thresholds from structured metadata.
+- **Traceability**: Maintains linkage from generated alerts back to originating business requirements and flow definitions.
+
+## Capability Owner
 - **Central SRE Team**: Design, translation logic, integration into delivery workflows, template governance.
-- **Enterprise Observability Platform Team**: API contracts, compatibility assurance, and tool-specific extensions.
-- **Development Teams**: Validation of alert logic against real-world telemetry and implementation feedback.
+
+## Adopting Teams
+- **Development Team**: Validation of alert logic against real-world telemetry and implementation feedback.
+- **Platform SRE Team**: API contracts, compatibility assurance, and tool-specific extensions.
 
 ## Supporting Use Cases
 - Translating a new feature’s observability definition into an alert rule without manual YAML scripting.

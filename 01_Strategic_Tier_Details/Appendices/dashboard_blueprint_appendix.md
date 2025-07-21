@@ -21,14 +21,25 @@ The **Dashboard Blueprint Generator** transforms structured business observabili
 
 ## Recommended Implementation Characteristics
 - Delivered as a **code generation utility or UI-integrated tool**.
-- Integrates with metadata systems like the **Business Observability Requirements Authoring System** and **Service Registry**.
+- Integrates with metadata systems like the **Business Observability Requirements** and **Service Registry**.
 - Should produce outputs in a format consumable by target platforms (e.g., Splunk, Grafana, Kibana).
 - Incorporates **role-specific visualization presets** (e.g., developer, SRE, product manager).
 
-## Primary Ownership
+## Technical Specifications
+- **Standards-Based Output**: Generates reusable, standards-based dashboard specifications that decouple dashboard logic from implementation.
+- **Component Definitions**: Includes layout, widget definitions, data source mappings, thresholds, and business signal annotations.
+- **Architecture Separation**: Decouples dashboard logic from implementation, enabling consistent visual telemetry across systems and teams.
+- **Platform Formats**: Supports platform-specific output formats such as Splunk Simple XML, Grafana JSON, and Datadog JSON.
+- **Normalized Input Processing**: Accepts normalized input from the observability requirements system (flows, steps, signals).
+- **Visual Template Engine**: Provides reusable visual templates tailored to monitoring platforms.
+- **Traceability Support**: Maintains traceability mapping (widget ↔ business signal ↔ KPI mapping).
+
+## Capability Owner
 - **Central SRE Team**: Template management, signal-to-visual logic, and governance.
-- **Product Teams**: Provide input on desired KPIs, business context, and target outcomes.
-- **Platform SREs**: Validate visual alignment with monitoring objectives and platform readiness.
+
+## Adopting Teams
+- **Product Team**: Provide input on desired KPIs, business context, and target outcomes.
+- **Development Team**: Validate visual alignment with monitoring objectives and platform readiness.
 
 ## Supporting Use Cases
 - A dashboard is auto-generated for a new flow based on completed observability templates.

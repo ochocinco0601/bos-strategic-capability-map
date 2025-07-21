@@ -25,10 +25,18 @@ The **Alert & Dashboard Deployment Engine** is the operational automation layer 
 - Should enforce platform-specific validation prior to deployment.
 - Compatible with enterprise observability platform APIs.
 
-## Primary Ownership
-- **Development Teams**: Initiate and verify deployments during feature delivery.
+## Technical Specifications
+- **Specification Processing**: Accepts standardized alert and dashboard specifications (e.g., YAML, JSON, HCL).
+- **Platform Integration**: Applies configurations to monitoring platforms using APIs or declarative provisioning tools.
+- **Deployment Management**: Supports dry-run validation, staged rollout, and rollback capabilities.
+- **CI/CD Integration**: Integrates with CI/CD workflows (e.g., GitHub Actions, Jenkins, Azure DevOps) to automate promotion through environments.
+- **Enterprise Platform Support**: Consumes output from blueprint generators and applies to production environments via infrastructure-as-code practices.
+
+## Capability Owner
 - **Central SRE Team**: Define deployment tooling, integration standards, and automation blueprints.
-- **Enterprise Observability Platform Teams**: Provide APIs, platform documentation, and access control boundaries.
+
+## Adopting Teams
+- **DevSecOps Tooling Team**: Initiate and verify deployments during feature delivery, provide APIs and platform integration.
 
 ## Supporting Use Cases
 - New alert rules from PI-planning are automatically deployed with feature rollout.

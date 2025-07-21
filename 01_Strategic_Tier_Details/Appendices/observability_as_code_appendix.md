@@ -25,10 +25,18 @@ The **Observability as Code & CICD Integration** capability represents the full 
 - Should align with existing infrastructure-as-code practices (e.g., Terraform, GitOps, Jenkins, GitHub Actions).
 - Enables automated generation from upstream authoring systems (e.g., Business Observability Requirements, Alert Rule Generator).
 
-## Primary Ownership
-- **Central SRE Team**: Define architecture, tooling standards, and enforcement mechanisms.
-- **Development Teams**: Maintain observability configurations alongside application code.
-- **Enterprise Observability Team**: Provide platform support, plugin libraries, and pipeline extensibility.
+## Capability Owner
+- **Central SRE Team** + **DevSecOps Tooling Team**: Define architecture, tooling standards, and enforcement mechanisms.
+
+## Adopting Teams
+- **Development Team**: Maintain observability configurations alongside application code.
+
+## Technical Specifications
+- **Repository Integration**: Repository-based source of truth for observability assets (e.g., YAML, HCL, JSON).
+- **CI/CD Validation**: Integration with CI tools to perform validation, linting, and preview deployments of observability configurations.
+- **Environment Promotion**: Promotion workflows across dev/test/prod environments via GitOps or declarative pipelines.
+- **Change Management**: Automated rollback and change tracking tied to Git commits and PRs.
+- **Pipeline Coordination**: Coordination with development pipeline owners to support deployment hooks for metrics, tracing config, and alert registration.
 
 ## Supporting Use Cases
 - Developers commit a new business feature and its associated observability definitions as YAML/JSON into Git.
