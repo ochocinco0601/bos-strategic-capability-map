@@ -13,7 +13,12 @@ All tier-based capabilities and ownership expectations should be evaluated again
 - **Description:** A structured interface and backend system of record for capturing flows, steps, signals, and associated business impacts.
 - **Capability Owners:** `Central SRE Team`
 - **Adopting Teams:** `Product Team`, `Development Team`
-- **Industry Mapping:** Aligns conceptually with "Service Catalog Management" (e.g., Atlassian Compass, Backstage) but focused on business observability metadata rather than just services.
+- <details>
+  <summary><strong>Industry Mapping</strong></summary>
+  
+  Aligns conceptually with "Service Catalog Management" (e.g., Atlassian Compass, Backstage) but focused on business observability metadata rather than just services.
+  
+  </details>
 
 ---
 
@@ -21,7 +26,12 @@ All tier-based capabilities and ownership expectations should be evaluated again
 - **Description:** Enterprise-wide system to standardize, register, and expose metadata for all business and technical services. This includes mapping services to business flows, stages, and steps, supporting inter-service dependency awareness (for tracing and silent failure detection), and exposing telemetry tagging metadata (`app_id`, `stage_id`, `customer_type`) to enable downstream automation and correlation.
 - **Capability Owners:** `Central SRE Team`
 - **Adopting Teams:** `Development Team`, `Product Team`
-- **Industry Mapping:** Expands on tools like Backstage, Consul, or ServiceNow CMDB by layering in business observability metadata and dependency models for enhanced telemetry traceability.
+- <details>
+  <summary><strong>Industry Mapping</strong></summary>
+  
+  Expands on tools like Backstage, Consul, or ServiceNow CMDB by layering in business observability metadata and dependency models for enhanced telemetry traceability.
+  
+  </details>
 
 ---
 
@@ -30,7 +40,12 @@ All tier-based capabilities and ownership expectations should be evaluated again
 - **Design Constraint:** Must only consume upstream observability metadata; it does not define or own alert logic, telemetry tagging, or dashboard implementation. This maintains strict separation of concerns.
 - **Capability Owners:** `Central SRE Team`
 - **Adopting Teams:** `Product Team`, `Development Team`, `Platform SRE Team`
-- **Industry Mapping:** Closely resembles Runbook generation or context-rich Incident Response Docs (e.g., PagerDuty Business Context Cards, Atlassian Runbooks), but specialized for proactive business insight rather than incident handling alone.
+- <details>
+  <summary><strong>Industry Mapping</strong></summary>
+  
+  Closely resembles Runbook generation or context-rich Incident Response Docs (e.g., PagerDuty Business Context Cards, Atlassian Runbooks), but specialized for proactive business insight rather than incident handling alone.
+  
+  </details>
 
 ---
 
@@ -47,13 +62,18 @@ All tier-based capabilities and ownership expectations should be evaluated again
   </details>
 - **Capability Owners:** `Central SRE Team`
 - **Adopting Teams:** `Development Team`, `Platform SRE Team`
-- **Industry Mapping:** Closely aligned with the **Signal-to-Alert pipeline** model found in tools like:
+- <details>
+  <summary><strong>Industry Mapping</strong></summary>
+  
+  Closely aligned with the **Signal-to-Alert pipeline** model found in tools like:
   - Splunk ITSI Notable Events / Correlation Searches
   - Prometheus AlertManager rules
   - Terraform-based alert modules (e.g., Datadog, SignalFx)
   - New Relic workflows
 
   Also resonates with the architectural practice of **"Alert Rule as Code"**, part of broader observability as code strategies.
+  
+  </details>
 
 ---
 
@@ -70,10 +90,15 @@ All tier-based capabilities and ownership expectations should be evaluated again
   </details>
 - **Capability Owners:** `Central SRE Team`
 - **Adopting Teams:** `Product Team`, `Development Team`
-- **Industry Mapping:** Strong alignment with tools like:
+- <details>
+  <summary><strong>Industry Mapping</strong></summary>
+  
+  Strong alignment with tools like:
   - **Grafana provisioning**
   - **Datadog Dashboard-as-Code**
   - **Splunk dashboard generators**
+  
+  </details>
 
 ---
 
@@ -90,11 +115,16 @@ All tier-based capabilities and ownership expectations should be evaluated again
   </details>
 - **Capability Owners:** `Central SRE Team`
 - **Adopting Teams:** `DevSecOps Tooling Team`
-- **Industry Mapping:** Strong alignment with:
+- <details>
+  <summary><strong>Industry Mapping</strong></summary>
+  
+  Strong alignment with:
   - **Terraform modules** for observability (e.g., Datadog, New Relic, Grafana dashboards).
   - **Splunk API-based** content deployment.
   - **Grafana provisioning** via configuration files or automation scripts.
   - General **"Observability as Code"** practices common in platform engineering.
+  
+  </details>
 
 ---
 
@@ -112,11 +142,15 @@ All tier-based capabilities and ownership expectations should be evaluated again
   </details>
 - **Capability Owners:** `Central SRE Team`
 - **Adopting Teams:** `Product Team`, `Development Team`, `Platform SRE Team`
-- **Industry Mapping:**
+- <details>
+  <summary><strong>Industry Mapping</strong></summary>
+  
   - **Jira SRE templates** and **observability-focused issue types**
   - **SAFe Enabler Stories** for technical observability work
   - **Backstage Scaffolder workflows** that generate tickets for observability requirements
   - Industry-aligned with **Platform Product Management** practices that bake SLOs and telemetry ownership into delivery plans
+  
+  </details>
 
 ---
 
@@ -134,11 +168,15 @@ All tier-based capabilities and ownership expectations should be evaluated again
   </details>
 - **Capability Owners:** `Central SRE Team` + `DevSecOps Tooling Team`
 - **Adopting Teams:** `Development Team`
-- **Industry Mapping:**
-  - Strong alignment with:
+- <details>
+  <summary><strong>Industry Mapping</strong></summary>
+  
+  Strong alignment with:
     - **Terraform Observability Modules**
     - **GitOps practices** for observability (e.g., ArgoCD, Flux)
     - **CI-integrated observability validation tools** (e.g., Prometheus rule testers, Splunk SPL checkers)
     - **OpenTelemetry Collector** pipelines deployed via IaC
-    - General **“Observability as Code”** approaches within Platform Engineering and SRE disciplines
+    - General **"Observability as Code"** approaches within Platform Engineering and SRE disciplines
+  
+  </details>
 
