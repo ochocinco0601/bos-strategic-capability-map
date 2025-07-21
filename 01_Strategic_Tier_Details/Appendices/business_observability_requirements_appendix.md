@@ -1,13 +1,13 @@
 # Business Observability Requirements Appendix
 
 ## Purpose
-This appendix defines the Business Observability Requirements Authoring System in detail. It explains its function, structure, and role within the strategic tier of observability maturity. This system ensures the organization can systematically capture, manage, and reuse observability requirements aligned with business goals.
+This appendix defines the Business Observability Requirements in detail. It explains its function, structure, and role within the strategic tier of observability maturity. This system ensures the organization can systematically capture, manage, and reuse observability requirements aligned with business goals.
 
 ## Capability Overview
-The **Business Observability Requirements Authoring System** provides structured mechanisms for capturing detailed observability inputs for each flow, stage, and step of a business process. It is responsible for gathering stakeholder-aligned information that forms the foundation for downstream observability artifacts such as alerts, dashboards, and impact playbooks.
+The **Business Observability Requirements** provides structured mechanisms for capturing detailed observability inputs for each flow, stage, and step of a business process. It is responsible for gathering stakeholder-aligned information that forms the foundation for downstream observability artifacts such as alerts, dashboards, and impact playbooks.
 
 ## Primary Capabilities
-- **Guided Authoring Interface** for product and engineering teams to enter observability-relevant data.
+- **Guided Authoring Interface** for product and engineering team members to enter observability-relevant data.
 - **Structured Input Fields** supporting business function, stakeholder needs, signals (business/process/system), target outcomes, KPIs, and context tags.
 - **Template Engine** aligned with the Business Observability Step Template, enforcing consistency and completeness.
 - **Ownership Attribution** that supports role-specific responsibilities (e.g., Product, Developer, Platform SRE).
@@ -25,10 +25,12 @@ The **Business Observability Requirements Authoring System** provides structured
 - Integrated with downstream components such as the **Alert Rule Generator**, **Dashboard Blueprint Generator**, and **Business Playbook Generator**.
 - Capable of embedding into Agile workflows (e.g., acceptance criteria templates, PI planning artifacts).
 
-## Primary Ownership
+## Capability Owner
 - **Central SRE Team**: System design, authoring standardization, user enablement, and template governance.
-- **Product Teams**: Input authorship and accountability for defining business-relevant observability context.
-- **Development Teams**: Participation in defining technical correlates of required business signals and reliability targets.
+
+## Adopting Teams
+- **Product Team**: Input authorship and accountability for defining business-relevant observability context.
+- **Development Team**: Participation in defining technical correlates of required business signals and reliability targets.
 
 ## Supporting Use Cases
 - A product owner defines a new feature’s expected business behavior and associated failure risks.
