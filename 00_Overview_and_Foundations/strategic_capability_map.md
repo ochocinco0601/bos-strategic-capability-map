@@ -9,7 +9,7 @@ All tier-based capabilities and ownership expectations should be evaluated again
 
 ## Tier: Strategic
 
-### 1. Business Observability Requirements Authoring System
+### 1. Business Observability Requirements
 - **Description:** A structured interface and backend system of record for capturing flows, steps, signals, and associated business impacts.
 - **Capability Owners:** `Central SRE Team`
 - **Adopting Teams:** `Product Team`, `Development Team`
@@ -35,7 +35,7 @@ All tier-based capabilities and ownership expectations should be evaluated again
 
 ---
 
-### 3. Business Playbook Composer
+### 3. Business Playbook Generator
 - **Description:** Generator that transforms structured observability metadata into consumable business playbooks (e.g., UI card, Markdown, PDF).
 - **Design Constraint:** Must only consume upstream observability metadata; it does not define or own alert logic, telemetry tagging, or dashboard implementation. This maintains strict separation of concerns.
 - **Capability Owners:** `Central SRE Team`
@@ -128,7 +128,7 @@ All tier-based capabilities and ownership expectations should be evaluated again
 
 ---
 
-### 7. Agile Integration Toolkit for Observability
+### 7. Agile Integration Toolkit
 - **Description:** Embedded toolkit and supporting guidance that connects observability deliverables with Agile workflows. It ensures that observability metadata (e.g., signal definitions, alert requirements, dashboards) is treated as a first-class artifact in Agile planning, delivery, and review. This includes story templates, backlog taxonomy, and alignment with Program Increment (PI) objectives.
 - <details>
   <summary><strong>Implied Capabilities</strong></summary>
